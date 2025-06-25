@@ -1,7 +1,7 @@
 // import { isUserLoading } from '@/store/selectors/isUserLoading';
 // import { userEmailState } from '@/store/selectors/userEmail';
 import { Button, Grid, Typography, Stack } from "@mui/material"
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 // import { useRecoilValue } from 'recoil';
 
 
@@ -49,10 +49,10 @@ export default function Home() {
               <img src={"https://img.freepik.com/free-vector/empty-classroom-interior-with-chalkboard_1308-65378.jpg"} width={500} height={400} alt={"course-image"}/>
           </Grid>
       </Grid> */}
-    <Grid container style={{ padding: "5vw",  }}>
-      <Grid container size={{ xs: 12, md: 6, lg: 6 }} sx={{  height: "400px" }} 
-      justifyContent="center"
-      alignItems="center"
+    <Grid container style={{ padding: "5vw", }}>
+      <Grid container size={{ xs: 12, md: 6, lg: 6 }} sx={{ height: "400px" }}
+        justifyContent="center"
+        alignItems="center"
       >
         <Stack spacing={3}>
           <Typography variant="h2">
@@ -63,16 +63,20 @@ export default function Home() {
           </Typography>
           <Grid container spacing={2}>
             <Grid >
-              <Button size="large" variant="contained">Sign up</Button>
+              <Button size="large" variant="contained" onClick={() =>{
+                router.push("/signup")
+              }} >Sign up</Button>
             </Grid>
             <Grid>
-              <Button size="large" variant="contained">Sign in</Button>
+              <Button size="large" variant="contained" onClick={() => (
+                router.push("/signin")
+              )}>Sign in</Button>
             </Grid>
           </Grid>
         </Stack>
       </Grid>
-      <Grid container size={{ xs: 12, md: 6, lg: 6 }} style={{  }} justifyContent="center"
-      alignItems="center"
+      <Grid container size={{ xs: 12, md: 6, lg: 6 }} style={{}} justifyContent="center"
+        alignItems="center"
       >
         <img src={"https://img.freepik.com/free-vector/empty-classroom-interior-with-chalkboard_1308-65378.jpg"} width={500} height={400} alt={"course-image"} />
       </Grid>
